@@ -4,9 +4,6 @@ anomaly.py
 This module implements threshold-based anomaly detection. It checks for scenarios
 where the same IP address has triggered too many "LOGIN_FAILED" events within a short
 time window (e.g., 5 minutes). If an IP surpasses the threshold, we flag it as suspicious.
-
-The block comments clarify how we group events by IP, filter them, sort, and finally count them in a rolling time window.
-
 """
 
 from datetime import timedelta
