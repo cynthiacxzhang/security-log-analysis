@@ -4,6 +4,8 @@ ml_anomaly.py
 Demonstrates how to incorporate a simple ML-based anomaly detection approach
 (Isolation Forest) into the existing log analysis pipeline. 
 
+Note: currently this file isn't connected to anything
+
 """
 
 import numpy as np

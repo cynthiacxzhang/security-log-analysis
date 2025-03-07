@@ -61,6 +61,7 @@ def main():
 
     # Print when process is complete
     print(f"Done processing logs. Check '{OUTPUT_FILE}' for alerts.")
+    # print(OUTPUT_FILE.encode("utf-8"))            # debugging
 
 # Standard Python entry point
 if __name__ == "__main__":

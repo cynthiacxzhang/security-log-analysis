@@ -9,7 +9,7 @@ time window (e.g., 5 minutes). If an IP surpasses the threshold, we flag it as s
 from datetime import timedelta
 
 def detect_threshold_anomalies(events: list, fail_event="LOGIN_FAILED",
-                               threshold=5, window_minutes=5) -> list:
+                               threshold=3, window_minutes=5) -> list:      # lowered threshold to 3
     """
     Given a list of event dictionaries, detect if an IP exceeds the 'threshold'
     number of 'fail_event' occurrences within 'window_minutes'. Each occurrence
