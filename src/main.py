@@ -2,10 +2,10 @@
 main.py
 
 The main entry point of the Security Log Analysis & Intrusion Detection system. 
-It reads raw log lines from a file, uses 'parse.py' to convert them into structured 
-data, and periodically runs both threshold-based anomaly detection (from 'anomaly.py') 
-and event correlation checks (from 'correlation.py'). Any suspicious findings get 
-written to an output file for later review.
+This file reads raw log lines from a file (currently sample.log), uses 'parse.py' to 
+convert them into structured data, and periodically runs both threshold-based anomaly 
+detection (from 'anomaly.py')and event correlation checks (from 'correlation.py'). 
+Any suspicious findings get written to an output file.
 
 """
 
@@ -31,8 +31,9 @@ def main():
     if os.path.exists(OUTPUT_FILE):
         os.remove(OUTPUT_FILE)
 
-    # We'll store all parsed events here
+    # Store all parsed events in this list
     parsed_events = []
+    #print(parsed_events)            # debugging check
 
     # Read the log file line by line
     with open(LOG_FILE, "r") as log_f:

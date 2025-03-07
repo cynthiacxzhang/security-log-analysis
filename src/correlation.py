@@ -1,10 +1,10 @@
 """
 correlation.py
 
-This module implements event correlation to identify multi-step attack patterns.
+This file implements event correlation to identify multi-step attack patterns.
 For example, if an IP address performs a 'PORT_SCAN' and then quickly has a 
-'LOGIN_FAILED' event within 2 minutes, we flag a correlated alert. This helps detect
-more subtle or advanced intrusions compared to single-event anomalies.
+'LOGIN_FAILED' event within 2 minutes, we flag a correlated alert. This ensurs
+detection of more advanced intrusions (as opposed to single-failed events). 
 """
 
 from datetime import timedelta

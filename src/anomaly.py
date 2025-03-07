@@ -1,9 +1,10 @@
 """
 anomaly.py
 
-This module implements threshold-based anomaly detection. It checks for scenarios
+This file implements threshold-based anomaly detection. It checks for scenarios
 where the same IP address has triggered too many "LOGIN_FAILED" events within a short
 time window (e.g., 5 minutes). If an IP surpasses the threshold, we flag it as suspicious.
+
 """
 
 from datetime import timedelta
@@ -16,13 +17,13 @@ def detect_threshold_anomalies(events: list, fail_event="LOGIN_FAILED",
     that violates this rule will produce an alert message (string).
     """
 
-    # Prepare a list for storing alert messages
+    # List for storing alert messages
     alerts = []
 
     # Dictionary that maps each IP to its list of events
     ip_events_map = {}
 
-    # Group all events by IP address
+    # Group all events by IP
     for e in events:
         ip = e.get('ip')
         ip_events_map.setdefault(ip, []).append(e)
@@ -39,7 +40,7 @@ def detect_threshold_anomalies(events: list, fail_event="LOGIN_FAILED",
         for i, current_fail in enumerate(fail_events):
             current_time = current_fail['timestamp']
             
-            # Define the start of our time window based on 'window_minutes'
+            # Define the start of the time window
             window_start = current_time - timedelta(minutes=window_minutes)
 
             # Count how many fail_events happened between window_start and current_time
@@ -57,5 +58,5 @@ def detect_threshold_anomalies(events: list, fail_event="LOGIN_FAILED",
                 )
                 alerts.append(alert_msg)
 
-    # Return all accumulated alert messages (each is a string describing the anomaly)
+    # Return all accumulated alert messages (strings that define the anomaly)
     return alerts
