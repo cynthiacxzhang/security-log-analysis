@@ -38,7 +38,7 @@ class MLAnomalyDetector:
         return self.model.predict(feature_matrix)
 
 # -------------------------------------------------------------------------
-# HELPER FUNCTIONS FOR FEATURE EXTRACTION
+# Feature extraction helper functions
 # -------------------------------------------------------------------------
 
 def build_features_for_ip(events: list) -> np.ndarray:
