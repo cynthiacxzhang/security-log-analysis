@@ -2,8 +2,8 @@
 ml_anomaly.py
 
 Demonstrates how to incorporate a simple ML-based anomaly detection approach
-(Isolation Forest) into the existing log analysis pipeline. We assume you have
-scikit-learn installed (add 'scikit-learn' to requirements.txt).
+(Isolation Forest) into the existing log analysis pipeline. 
+
 """
 
 import numpy as np

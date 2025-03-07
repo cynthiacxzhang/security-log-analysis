@@ -53,13 +53,13 @@ def main():
                 # Combine all alerts into a single list
                 all_alerts = anomaly_alerts + correlation_alerts
 
-                # If we found any suspicious events, append them to the output file
+                # Append suspicious alerts into output file
                 if all_alerts:
                     with open(OUTPUT_FILE, "a") as out_f:
                         for alert in all_alerts:
                             out_f.write(alert + "\n")
 
-    # Print a quick message to let us know processing is complete
+    # Print when process is complete
     print(f"Done processing logs. Check '{OUTPUT_FILE}' for alerts.")
 
 # Standard Python entry point
