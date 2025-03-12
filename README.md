@@ -14,3 +14,9 @@ This project ingests security logs (e.g., login attempts, port scans) and detect
 - Threshold Anomalies: Flags IP addresses that exceed a defined threshold of failures within a specific time window.
 - Correlation Rules: Identifies multi-step suspicious sequences, such as a PORT_SCAN quickly followed by a LOGIN_FAILED.
 - Isolation Forest: Simple ML-based anomaly detection that isolates anomalies by randomly partitioning features
+
+##### *Project Structure*
+
+- logs/ – Holds raw log files.
+- output/ – Stores generated alerts.
+- src/ – Contains all source code, divided into multiple files based on functionality.
