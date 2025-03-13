@@ -2,7 +2,7 @@
 main.py
 
 The main entry point of the Security Log Analysis & Intrusion Detection system. 
-This file reads raw log lines from a file (currently sample.log), uses 'parse.py' to 
+This file reads raw log lines from a sample.log, uses 'parse.py' to 
 convert them into structured data, and periodically runs both threshold-based anomaly 
 detection (from 'anomaly.py')and event correlation checks. 
 Any suspicious findings get written to an output file.
