@@ -10,7 +10,7 @@ Any suspicious findings get written to an output file.
 """
 
 import os
-from parse import parse_log_line        # <-- Updated import from 'parse.py'
+from parser import parse_log_line        # <-- Updated import from 'parse.py'
 from anomaly import detect_threshold_anomalies
 from correlation import correlate_events
 

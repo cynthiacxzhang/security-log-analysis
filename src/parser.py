@@ -1,7 +1,7 @@
 """
 parser.py
 
-This module is responsible for taking raw log lines (strings) and converting them
+This file is responsible for taking raw log lines (strings) and converting them
 into structured Python dictionaries with fields like timestamp, IP address, event,
 and user. It uses regular expressions to extract the data and ensures the timestamp
 is converted into a datetime object for easier time-based comparisons downstream.
