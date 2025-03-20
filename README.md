@@ -2,7 +2,7 @@
 
 ##### *Description*
 
-This project ingests security logs (e.g., login attempts, port scans) and detects suspicious activity based on simple rules:
+This project ingests security logs (e.g., login attempts, port scans) and detects suspicious activity based on simple rules.
 
 - Threshold-Based Anomaly Detection (too many login failures within a time window).
 - Event Correlation (e.g., PORT_SCAN followed quickly by LOGIN_FAILED from the same IP).
